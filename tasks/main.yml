@@ -1,0 +1,9 @@
+---
+
+- name: Install OS X applications
+  homebrew_cask:
+    name: "{{ item }}"
+    update_homebrew: yes
+  with_items: "{{ homebrew_cask_applications }}"
+
+- include: mas.yml
