@@ -5,5 +5,9 @@
     name: "{{ item }}"
     update_homebrew: yes
   with_items: "{{ homebrew_cask_applications }}"
+  tags:
+    - cask
 
-- include: mas.yml
+- import_tasks: mas.yml
+  tags:
+    - mas

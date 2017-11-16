@@ -11,6 +11,6 @@
   changed_when: false
 
 - name: Ensure configured MAS apps are installed.
-  command: mas install "{{ item.id|default(item) }}"
+  command: mas install {{ item.id }}
   with_items: "{{ mas_applications }}"
-  when: "'{{ item.id|default(item) }}' not in mas_list.stdout"
+  when: item.id not in mas_list.stdout
