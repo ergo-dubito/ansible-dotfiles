@@ -28,3 +28,14 @@ mas_applications:
   - { id: "1278508951", name: Trello }
   - { id: "557168941", name: Tweetbot }
   - { id: "410628904", name: Wunderlist }
+
+python_brew_packages:
+  - ipython
+  - pipenv
+
+node_brew_packages:
+  - node
+  - npm
+
+node_global_packages:
+  - create-react-app

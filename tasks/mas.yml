@@ -1,16 +1,16 @@
 ---
 
-- name: Install MAS to install Apps from the Mac Store
+- name: Installing mas to install Apps from the Mac Store
   homebrew:
     name: mas
 
-- name: List installed MAS apps
+- name: Listing installed MAS apps
   command: mas list
   register: mas_list
   check_mode: no
   changed_when: false
 
-- name: Ensure configured MAS apps are installed.
+- name: Ensuring configured MAS apps are installed
   command: mas install {{ item.id }}
   with_items: "{{ mas_applications }}"
   when: item.id not in mas_list.stdout
