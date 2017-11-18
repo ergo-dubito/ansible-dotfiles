@@ -22,7 +22,6 @@
     src: com.googlecode.iterm2.plist
     dest: "{{ ansible_env.HOME }}/Library/Preferences/com.googlecode.iterm2.plist"
 
-
 - name: Creating fish functions directory
   file:
     dest: "{{ ansible_env.HOME }}/.config/fish/functions"
