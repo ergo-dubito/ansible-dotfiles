@@ -1,0 +1,42 @@
+---
+
+- name: Installing fish
+  homebrew:
+    name: fish
+
+- name: Adding font's hombrew tap
+  homebrew_tap:
+    name: caskroom/fonts
+
+- name: Installing font
+  homebrew_cask:
+    name: font-fira-code
+
+- name: Updating fish configuration
+  copy:
+    src: config.fish
+    dest: "{{ ansible_env.HOME }}/.config/fish/config.fish"
+
+- name: Updating iTerm configuration
+  copy:
+    src: com.googlecode.iterm2.plist
+    dest: "{{ ansible_env.HOME }}/Library/Preferences/com.googlecode.iterm2.plist"
+
+
+- name: Creating fish functions directory
+  file:
+    dest: "{{ ansible_env.HOME }}/.config/fish/functions"
+    recurse: yes
+    state: directory
+
+- name: Installing fisherman
+  get_url:
+    url: https://git.io/fisher
+    dest: "{{ ansible_env.HOME }}/.config/fish/functions/fisher.fish"
+
+- name: Installing fish plugins
+  shell: fisher {{ item.name | default(item) }}
+  args:
+    executable: /usr/local/bin/fish
+    creates: "{{ ansible_env.HOME }}/.config/fisherman/{{ item.creates | default(item) }}"
+  with_items: "{{ fish_plugins }}"

@@ -39,3 +39,7 @@ node_brew_packages:
 
 node_global_packages:
   - create-react-app
+
+fish_plugins:
+  - simple
+  - { name: edc/bass, creates: bass }

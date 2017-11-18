@@ -28,3 +28,7 @@
 - import_tasks: node.yml
   tags:
     - node
+
+- import_tasks: fish.yml
+  tags:
+    - fish
