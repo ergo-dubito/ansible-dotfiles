@@ -58,7 +58,7 @@ vim_plugins:
   - { name: nerdtree, repo: "https://github.com/scrooloose/nerdtree.git" }
   - { name: nerdtree-git-plugin, repo: "https://github.com/Xuyuanp/nerdtree-git-plugin.git" }
   - { name: python-syntax, repo: "https://github.com/hdima/python-syntax.git" }
-  - { name: sierra, repo: "https://github.com/AlessandroYorba/Sierra.git" }
+  - { name: vim-colorchemes, repo: "https://github.com/flazz/vim-colorschemes.git" }
   - { name: vim-airline, repo: "https://github.com/vim-airline/vim-airline.git" }
   - { name: vim-fugitive, repo: "https://github.com/tpope/vim-fugitive.git" }
   - { name: vim-gitgutter, repo: "https://github.com/airblade/vim-gitgutter.git" }
