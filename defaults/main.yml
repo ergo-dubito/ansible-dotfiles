@@ -41,9 +41,9 @@ node_global_packages:
   - create-react-app
 
 fish_plugins:
-  - simple
   - { name: edc/bass, creates: bass }
   - { name: laughedelic/pisces, creates: pisces }
+  - simple
   - z
 
 vim_dependencies:
