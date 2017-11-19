@@ -18,10 +18,7 @@
   tags:
     - mas
 
-- name: Installing Python related packages
-  homebrew:
-    name: "{{ item }}"
-  with_items: "{{ python_brew_packages }}"
+- import_tasks: python.yml
   tags:
     - python
 
