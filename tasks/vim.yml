@@ -1,10 +1,11 @@
 ---
 
-- name: Installing vim
+- name: Installing vim and dependencies
   homebrew:
-    name: vim
+    name: "{{ item }}"
     state: latest
     install_options: with-lua
+  with_items: "{{ vim_dependencies }}"
 
 - name: Creating autoload directory
   file:
@@ -34,3 +35,15 @@
     force: yes
     dest: "{{ ansible_env.HOME }}/.vim/bundle/{{ item.name }}"
   with_items: "{{ vim_plugins }}"
+
+- name: Compiling Command-T
+  shell: "ruby extconf.rb; and make"
+  args:
+    executable: /usr/local/bin/fish
+    chdir: "{{ ansible_env.HOME }}/.vim/bundle/command-t/ruby/command-t/ext/command-t"
+
+- name: Compiling YouCompleteMe
+  shell: python install.py --js-completer
+  args:
+    executable: /usr/local/bin/fish
+    chdir: "{{ ansible_env.HOME }}/.vim/bundle/youcompleteme"
