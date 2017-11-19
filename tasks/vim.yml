@@ -33,6 +33,7 @@
     repo: "{{ item.repo }}"
     depth: 1
     force: yes
+    recursive: yes
     dest: "{{ ansible_env.HOME }}/.vim/bundle/{{ item.name }}"
   with_items: "{{ vim_plugins }}"
 
@@ -41,9 +42,11 @@
   args:
     executable: /usr/local/bin/fish
     chdir: "{{ ansible_env.HOME }}/.vim/bundle/command-t/ruby/command-t/ext/command-t"
+    creates: ./ext.bundle
 
 - name: Compiling YouCompleteMe
   shell: python install.py --js-completer
   args:
     executable: /usr/local/bin/fish
     chdir: "{{ ansible_env.HOME }}/.vim/bundle/youcompleteme"
+    creates: ./third_party/ycmd/third_party/tern_runtime/node_modules
