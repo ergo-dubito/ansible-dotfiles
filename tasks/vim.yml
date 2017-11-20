@@ -37,13 +37,6 @@
     dest: "{{ ansible_env.HOME }}/.vim/bundle/{{ item.name }}"
   with_items: "{{ vim_plugins }}"
 
-- name: Compiling Command-T
-  shell: "ruby extconf.rb; and make"
-  args:
-    executable: /usr/local/bin/fish
-    chdir: "{{ ansible_env.HOME }}/.vim/bundle/command-t/ruby/command-t/ext/command-t"
-    creates: ./ext.bundle
-
 - name: Compiling YouCompleteMe
   shell: python install.py --js-completer
   args:

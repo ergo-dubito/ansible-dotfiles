@@ -101,6 +101,14 @@ let g:gitgutter_sign_modified_removed='∘'
 " Ale
 let g:ale_linters={'python': ['pylint', 'pycodestyle']}
 
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+
+" ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_working_path_mode = 'ra'
+
 " Section: Color and syntax ->>1
 "--------------------------------------------------------------------------
 

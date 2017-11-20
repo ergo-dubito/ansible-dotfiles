@@ -50,16 +50,18 @@ vim_dependencies:
   - vim
   - ansible-lint
   - CMake
+  - proselint
 
 vim_plugins:
   - { name: ale, repo: "https://github.com/w0rp/ale.git" }
   - { name: ansible-vim, repo: "https://github.com/pearofducks/ansible-vim.git" }
   - { name: auto-pairs, repo: "https://github.com/jiangmiao/auto-pairs.git" }
-  - { name: command-t, repo: "https://github.com/wincent/command-t.git" }
+  - { name: ctrlp, repo: "https://github.com/ctrlpvim/ctrlp.vim.git" }
   - { name: nerdtree, repo: "https://github.com/scrooloose/nerdtree.git" }
   - { name: nerdtree-git-plugin, repo: "https://github.com/Xuyuanp/nerdtree-git-plugin.git" }
   - { name: python-syntax, repo: "https://github.com/hdima/python-syntax.git" }
   - { name: vim-airline, repo: "https://github.com/vim-airline/vim-airline.git" }
+  - { name: vim-buffergator, repo: "https://github.com/jeetsukumaran/vim-buffergator.git" }
   - { name: vim-fish, repo: "https://github.com/dag/vim-fish.git" }
   - { name: vim-fugitive, repo: "https://github.com/tpope/vim-fugitive.git" }
   - { name: vim-gitgutter, repo: "https://github.com/airblade/vim-gitgutter.git" }
