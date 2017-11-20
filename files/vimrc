@@ -18,6 +18,7 @@ vnoremap <space> zf
 " Editor behavior
 set autoread
 set autowrite
+set directory-=. " Wherever but here
 set encoding=utf8 " UTF-8 default enconding
 set expandtab " Tabs are the devil's work
 set fileformats=unix,dos,mac " Prefer Unix
