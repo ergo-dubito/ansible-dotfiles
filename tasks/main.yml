@@ -1,9 +1,35 @@
 ---
 
-- name: Install OS X applications
+- name: Updating homebrew and upgrading packages
+  homebrew:
+    update_homebrew: yes
+    upgrade_all: yes
+  tags:
+    - homebrew
+
+- name: Installing cask applications
   homebrew_cask:
     name: "{{ item }}"
-    update_homebrew: yes
   with_items: "{{ homebrew_cask_applications }}"
+  tags:
+    - cask
 
-- include: mas.yml
+- import_tasks: mas.yml
+  tags:
+    - mas
+
+- import_tasks: python.yml
+  tags:
+    - python
+
+- import_tasks: node.yml
+  tags:
+    - node
+
+- import_tasks: fish.yml
+  tags:
+    - fish
+
+- import_tasks: vim.yml
+  tags:
+    - vim

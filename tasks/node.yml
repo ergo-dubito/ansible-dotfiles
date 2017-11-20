@@ -1,0 +1,13 @@
+---
+
+- name: Installing node related homebrew packages
+  homebrew:
+    name: "{{ item }}"
+  with_items: "{{ node_brew_packages }}"
+
+- name: Installing global node packages
+  npm:
+    name: "{{ item }}"
+    global: yes
+    state: latest
+  with_items: "{{ node_global_packages }}"

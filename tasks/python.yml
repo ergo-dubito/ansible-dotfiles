@@ -1,0 +1,17 @@
+---
+
+- name: Installing Python related packages
+  homebrew:
+    name: "{{ item }}"
+  with_items: "{{ python_brew_packages }}"
+
+
+- name: Creating fish completions folder
+  file:
+    path: "{{ ansible_env.HOME }}/.config/fish/completions"
+    state: directory
+
+- name: Updating pipenv completion for fish
+  copy:
+    src: pipenv.fish
+    dest: "{{ ansible_env.HOME }}/.config/fish/completions/pipenv.fish"

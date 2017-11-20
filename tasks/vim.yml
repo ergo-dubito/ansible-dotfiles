@@ -1,0 +1,45 @@
+---
+
+- name: Installing vim and dependencies
+  homebrew:
+    name: "{{ item }}"
+    state: latest
+    install_options: with-lua
+  with_items: "{{ vim_dependencies }}"
+
+- name: Creating autoload directory
+  file:
+    path: "{{ ansible_env.HOME }}/.vim/autoload"
+    state: directory
+
+- name: Creating bundle directory
+  file:
+    path: "{{ ansible_env.HOME }}/.vim/bundle"
+    state: directory
+
+- name: Updating vimrc
+  copy:
+    src: vimrc
+    dest: "{{ ansible_env.HOME }}/.vimrc"
+
+- name: Downloading pathogen
+  get_url:
+    url: https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
+    dest: "{{ ansible_env.HOME }}/.vim/autoload"
+    validate_certs: no
+
+- name: Installing plugins
+  git:
+    repo: "{{ item.repo }}"
+    depth: 1
+    force: yes
+    recursive: yes
+    dest: "{{ ansible_env.HOME }}/.vim/bundle/{{ item.name }}"
+  with_items: "{{ vim_plugins }}"
+
+- name: Compiling YouCompleteMe
+  shell: python install.py --js-completer
+  args:
+    executable: /usr/local/bin/fish
+    chdir: "{{ ansible_env.HOME }}/.vim/bundle/youcompleteme"
+    creates: ./third_party/ycmd/third_party/tern_runtime/node_modules
