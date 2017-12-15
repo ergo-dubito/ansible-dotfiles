@@ -12,6 +12,7 @@ homebrew_cask_applications:
   - iterm2
   - keybase
   - marshallofsound-google-play-music-player
+  - postgres
   - slack
   - steam
   - teamviewer
@@ -19,7 +20,6 @@ homebrew_cask_applications:
   - transmission
   - tunnelbear
   - tunnelblick
-  - vagrant
   - virtualbox
 
 mas_applications:
@@ -66,7 +66,6 @@ vim_plugins:
   - { name: vim-fugitive, repo: "https://github.com/tpope/vim-fugitive.git" }
   - { name: vim-gitgutter, repo: "https://github.com/airblade/vim-gitgutter.git" }
   - { name: vim-indentLine, repo: "https://github.com/Yggdroot/indentLine.git" }
-  - { name: vim-startify, repo: "https://github.com/mhinz/vim-startify.git" }
   - { name: sierra, repo: "https://github.com/AlessandroYorba/Sierra.git" }
   - { name: surround, repo: "https://github.com/tpope/vim-surround.git" }
   - { name: symplyfold, repo: "https://github.com/tmhedberg/SimpylFold.git" }
