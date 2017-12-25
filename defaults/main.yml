@@ -66,6 +66,7 @@ vim_plugins:
   - { name: vim-fugitive, repo: "https://github.com/tpope/vim-fugitive.git" }
   - { name: vim-gitgutter, repo: "https://github.com/airblade/vim-gitgutter.git" }
   - { name: vim-indentLine, repo: "https://github.com/Yggdroot/indentLine.git" }
+  - { name: vim-terraform, repo: "https://github.com/hashivim/vim-terraform.git" }
   - { name: sierra, repo: "https://github.com/AlessandroYorba/Sierra.git" }
   - { name: surround, repo: "https://github.com/tpope/vim-surround.git" }
   - { name: symplyfold, repo: "https://github.com/tmhedberg/SimpylFold.git" }
