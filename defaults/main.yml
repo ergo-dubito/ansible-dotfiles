@@ -24,7 +24,7 @@ homebrew_cask_applications:
 
 mas_applications:
   - { id: "1263070803", name: Lungo }
-  - { id: "949724400", name: Moneywiz 2 }
+  - { id: "1012291524", name: Moneywiz 2 }
   - { id: "1278508951", name: Trello }
   - { id: "557168941", name: Tweetbot }
   - { id: "410628904", name: Wunderlist }

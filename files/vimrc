@@ -12,6 +12,10 @@ nnoremap <leader>f zR
 nnoremap <leader>ff zM
 vnoremap <space> zf
 
+" Keep my text highlighted plz
+vnoremap < <gv
+vnoremap > >gv
+
 " Section: Vim options ->>1
 "--------------------------------------------------------------------------
 
@@ -31,6 +35,7 @@ set scroll=4 " Number of lines to scroll with ^U ^D
 set softtabstop=4 " Makes you think that your spaces are tabs
 set shortmess+=A " Ignore swamp files
 set tabstop=4 " The all powerfull tab number
+set formatoptions+=j " Smarter line joins
 
 " Cosmetics
 set laststatus=2 " Always show the status bar
