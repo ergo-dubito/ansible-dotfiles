@@ -71,3 +71,5 @@ vim_plugins:
   - { name: surround, repo: "https://github.com/tpope/vim-surround.git" }
   - { name: symplyfold, repo: "https://github.com/tmhedberg/SimpylFold.git" }
   - { name: youcompleteme, repo: "https://github.com/Valloric/YouCompleteMe.git" }
+
+ssh_keys: []

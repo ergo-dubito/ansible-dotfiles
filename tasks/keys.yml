@@ -1,0 +1,19 @@
+---
+
+- name: Creating .ssh directory
+  file:
+    path: ~/.ssh
+    state: directory
+
+- name: Installing ssh keys
+  copy:
+    content: "{{item.key}}"
+    dest: ~/.ssh/{{item.name}}
+    mode: 0600
+  with_items: "{{ssh_keys}}"
+
+- name: Copy ssh config
+  copy:
+    src: config
+    dest: ~/.ssh/config
+    mode: 0600

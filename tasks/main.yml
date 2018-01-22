@@ -33,3 +33,7 @@
 - import_tasks: vim.yml
   tags:
     - vim
+
+- import_tasks: keys.yml
+  tags:
+    - keys
