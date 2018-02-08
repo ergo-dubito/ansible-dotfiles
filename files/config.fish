@@ -8,3 +8,7 @@ set -xg PATH $PATH /Applications/Postgres.app/Contents/Versions/latest/bin
 function c
     z $argv
 end
+
+if status --is-login
+    set -gx PATH /usr/local/bin $PATH
+end
