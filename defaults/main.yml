@@ -13,6 +13,7 @@ homebrew_cask_applications:
   - keybase
   - marshallofsound-google-play-music-player
   - postgres
+  - postman
   - slack
   - spotify
   - steam
