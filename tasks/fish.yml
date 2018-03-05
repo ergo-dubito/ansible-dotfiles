@@ -10,7 +10,7 @@
 
 - name: Installing font
   homebrew_cask:
-    name: font-fira-code
+    name: font-firacode-nerd-font
 
 - name: Updating fish configuration
   copy:

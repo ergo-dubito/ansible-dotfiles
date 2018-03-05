@@ -64,6 +64,7 @@ vim_plugins:
   - { name: python-syntax, repo: "https://github.com/hdima/python-syntax.git" }
   - { name: vim-airline, repo: "https://github.com/vim-airline/vim-airline.git" }
   - { name: vim-buffergator, repo: "https://github.com/jeetsukumaran/vim-buffergator.git" }
+  - { name: vim-devicons, repo: "https://github.com/ryanoasis/vim-devicons" }
   - { name: vim-fish, repo: "https://github.com/dag/vim-fish.git" }
   - { name: vim-fugitive, repo: "https://github.com/tpope/vim-fugitive.git" }
   - { name: vim-gitgutter, repo: "https://github.com/airblade/vim-gitgutter.git" }
