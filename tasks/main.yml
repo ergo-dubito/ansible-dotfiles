@@ -7,6 +7,13 @@
   tags:
     - homebrew
 
+- name: Installing basic tools
+  homebrew:
+    name: "{{ item }}"
+  with_items: "{{ basic_tools  }}"
+  tags:
+    - homebrew
+
 - name: Installing cask applications
   homebrew_cask:
     name: "{{ item }}"

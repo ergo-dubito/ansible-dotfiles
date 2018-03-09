@@ -1,5 +1,21 @@
 ---
 
+basic_tools:
+  - ack
+  - awscli
+  - bash
+  - bash-completion
+  - fd
+  - git
+  - googler
+  - htop
+  - make
+  - mosh
+  - neofetch
+  - nnn
+  - terraform
+  - the_silver_searcher
+
 homebrew_cask_applications:
   - 1password
   - caprine
@@ -9,11 +25,14 @@ homebrew_cask_applications:
   - evernote
   - firefox
   - google-chrome
+  - google-drive-file-stream
   - iterm2
   - keybase
   - marshallofsound-google-play-music-player
+  - openemu-experimental
   - postgres
   - postman
+  - skype
   - slack
   - spotify
   - steam
@@ -24,6 +43,7 @@ homebrew_cask_applications:
   - tunnelblick
   - virtualbox
 
+# Only ids are actually necessary but I added the name to remember what they mean
 mas_applications:
   - { id: "1263070803", name: Lungo }
   - { id: "1012291524", name: Moneywiz 2 }
