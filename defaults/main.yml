@@ -42,6 +42,7 @@ homebrew_cask_applications:
   - tunnelbear
   - tunnelblick
   - virtualbox
+  - zoomus
 
 # Only ids are actually necessary but I added the name to remember what they mean
 mas_applications:
