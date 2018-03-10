@@ -42,3 +42,4 @@
 # -------------------------------------------------------------------------
 - name: Checking for updates daily instead of weekly
   command: defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+  changed_when: false
