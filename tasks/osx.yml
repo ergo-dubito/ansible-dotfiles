@@ -1,0 +1,44 @@
+---
+
+# Impossible to determine idempotency to any task in this file
+
+# Section: General ->>1
+# -------------------------------------------------------------------------
+- name: Saving to instead of iCloud by default
+  command: defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+  changed_when: false
+
+- name: Disabling open application confirmation dialog
+  command: defaults write com.apple.LaunchServices LSQuarantine -bool false
+  changed_when: false
+
+- name: Disabling autocorrect
+  command: defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+  changed_when: false
+
+- name: Disabling smart quotes substitution
+  command: defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+  changed_when: false
+
+- name: Disabling automatic capitalization
+  command: defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+  changed_when: false
+
+- name: Disabling smart dashes
+  command: defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+  changed_when: false
+
+- name: Disabling period substitution
+  command: defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+  changed_when: false
+
+# Section: Tweetbot ->>1
+# -------------------------------------------------------------------------
+- name: Bypassing t.co urls in Tweetbot
+  command: defaults write com.tapbots.TweetbotMac OpenURLsDirectly -bool true
+  changed_when: false
+
+# Section: App Store ->>1
+# -------------------------------------------------------------------------
+- name: Checking for updates daily instead of weekly
+  command: defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1

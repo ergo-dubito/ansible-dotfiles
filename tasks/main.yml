@@ -21,10 +21,6 @@
   tags:
     - cask
 
-- import_tasks: mas.yml
-  tags:
-    - mas
-
 - import_tasks: python.yml
   tags:
     - python
@@ -48,3 +44,11 @@
 - import_tasks: git.yml
   tags:
     - git
+
+- import_tasks: osx.yml
+  tags:
+    - osx
+
+- import_tasks: mas.yml
+  tags:
+    - mas
