@@ -32,18 +32,24 @@
   command: defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
   changed_when: false
 
+- name: Enabling Dark interface
+  command: defaults write NSGlobalDomain AppleInterfaceStyle Dark
+  changed_when: false
+
 # Section: I/O ->>1
 # -------------------------------------------------------------------------
 - name: Enabling tap to click
-  command: defaults write NSGlobalDomain com.apple.AppleMultitouchTrackpad Click -bool true
+  command: defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
   changed_when: false
 
 - name: Enabling three finger drag
-  command: defaults write NSGlobalDomain com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+  shell: >
+    defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true &&
+    defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
   changed_when: false
 
 - name: Enabling four finger horizontal swipe
-  command: defaults write NSGlobalDomain com.apple.AppleMultitouchTrackpad TrackpadFourFingerHorizSwipeGesture -int 2
+  command: defaults write NSGlobalDomain com.apple.AppleMultitouchTrackpad.TrackpadFourFingerHorizSwipeGesture -int 2
   changed_when: false
 
 # Section: Tweetbot ->>1
