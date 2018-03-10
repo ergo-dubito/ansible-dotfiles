@@ -1,0 +1,10 @@
+---
+
+- name: Installing git
+  homebrew:
+    name: git
+
+- name: Copying .gitconfig file
+  copy:
+    src: gitconfig
+    dest: ~/.gitconfig

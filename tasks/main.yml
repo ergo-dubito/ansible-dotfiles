@@ -44,3 +44,7 @@
 - import_tasks: keys.yml
   tags:
     - keys
+
+- import_tasks: git.yml
+  tags:
+    - git

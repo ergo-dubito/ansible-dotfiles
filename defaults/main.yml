@@ -6,7 +6,6 @@ basic_tools:
   - bash
   - bash-completion
   - fd
-  - git
   - googler
   - htop
   - make
