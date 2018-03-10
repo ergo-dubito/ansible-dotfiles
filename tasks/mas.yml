@@ -1,8 +1,13 @@
 ---
 
-- name: Installing mas to install Apps from the Mac Store
+- name: Installing MAS
   homebrew:
     name: mas
+
+# mas signin doesn't work in case you're wondering
+- name: Checking MAS login status; Sign in using the App Store if this fails
+  command: mas account
+  changed_when: false
 
 - name: Listing installed MAS apps
   command: mas list

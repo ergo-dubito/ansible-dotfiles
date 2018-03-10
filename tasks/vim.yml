@@ -28,7 +28,7 @@
     dest: "{{ ansible_env.HOME }}/.vim/autoload"
     validate_certs: no
 
-- name: Installing plugins
+- name: Installing vim plugins
   git:
     repo: "{{ item.repo }}"
     depth: 1
