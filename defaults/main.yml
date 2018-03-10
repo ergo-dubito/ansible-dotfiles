@@ -97,3 +97,6 @@ vim_plugins:
   - { name: youcompleteme, repo: "https://github.com/Valloric/YouCompleteMe.git" }
 
 ssh_keys: []
+
+gpg_flag: -----BEGIN PGP PUBLIC KEY BLOCK-----
+gpg_key: { id: jd@inkatze.com, public: '', private: '' }

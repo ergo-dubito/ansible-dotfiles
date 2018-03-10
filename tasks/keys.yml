@@ -17,3 +17,46 @@
     src: config
     dest: ~/.ssh/config
     mode: 0600
+
+- name: Installing gpg
+  homebrew:
+    name: gpg
+
+- name: Checking gpg key
+  command: gpg -a --export {{ gpg_key.id }}
+  register: gpg_export
+  changed_when: 'gpg_flag not in gpg_export.stdout'
+
+- name: Copying gpg public key to temp file
+  copy:
+    content: "{{ gpg_key.public }}"
+    dest: /tmp/gpg_public.key
+    mode: 0600
+  when: 'gpg_flag not in gpg_export.stdout'
+
+- name: Copying gpg private key to temp file
+  copy:
+    content: "{{ gpg_key.private }}"
+    dest: /tmp/gpg_private.key
+    mode: 0600
+  when: 'gpg_flag not in gpg_export.stdout'
+
+- name: Installing gpg public key
+  command: gpg --import /tmp/gpg_public.key
+  when: 'gpg_flag not in gpg_export.stdout'
+
+- name: Installing gpg private key
+  command: gpg --import /tmp/gpg_private.key
+  when: 'gpg_flag not in gpg_export.stdout'
+
+- name: Deleting gpg public key temp file
+  file:
+    path: /tmp/gpg_public.key
+    state: absent
+  when: 'gpg_flag not in gpg_export.stdout'
+
+- name: Deleting gpg private key temp file
+  file:
+    path: /tmp/gpg_private.key
+    state: absent
+  when: 'gpg_flag not in gpg_export.stdout'
