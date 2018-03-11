@@ -43,7 +43,11 @@
 # Section: I/O ->>1
 # -------------------------------------------------------------------------
 - name: Enabling tap to click
-  command: defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+  shell: >
+    defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1 &&
+    defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1 &&
+    defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1 &&
+    defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -int 1
   changed_when: false
 
 - name: Enabling three finger drag
