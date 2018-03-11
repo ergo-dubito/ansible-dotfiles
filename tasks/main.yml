@@ -42,18 +42,19 @@
   tags:
     - vim
 
+- import_tasks: git.yml
+  tags:
+    - git
+
 - import_tasks: keys.yml
   tags:
     - keys
 
-- import_tasks: git.yml
+- import_tasks: mas.yml
   tags:
-    - git
+    - mas
 
 - import_tasks: osx.yml
   tags:
     - osx
 
-- import_tasks: mas.yml
-  tags:
-    - mas
