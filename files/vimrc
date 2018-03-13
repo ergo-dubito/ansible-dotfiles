@@ -98,9 +98,7 @@ let NERDTreeIgnore=['\~$', '\.pyc$', '__pycache__']
 map <C-n> :NERDTreeToggle<CR>
 
 " indentLine
-let g:indentLine_char='│'
-let g:indentLine_leadingSpaceEnabled=1
-let g:indentLine_leadingSpaceChar='˾'
+let g:indentLine_char='▏'
 
 " GitGutter
 let g:gitgutter_sign_added='∙'
@@ -115,16 +113,18 @@ let g:ale_linters={'python': ['pylint', 'pycodestyle']}
 let g:airline#extensions#tabline#enabled = 1
 
 " ctrlp
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_map='<c-p>'
+let g:ctrlp_cmd='CtrlPMixed'
+let g:ctrlp_working_path_mode='ra'
 
 " vim-terraform
 let g:terraform_align=1
 let g:terraform_fold_sections=1
 
 " vim-devicons
-let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
+let g:WebDevIconsNerdTreeGitPluginForceVAlign=1
+let g:WebDevIconsUnicodeDecorateFolderNodes=1
+let g:DevIconsEnableFoldersOpenClose=1
 
 " Section: Color and syntax ->>1
 "--------------------------------------------------------------------------
