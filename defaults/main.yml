@@ -5,6 +5,7 @@ basic_tools:
   - awscli
   - bash
   - bash-completion
+  - docker
   - fd
   - googler
   - htop
