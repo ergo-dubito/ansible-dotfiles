@@ -26,10 +26,13 @@ homebrew_cask_applications:
   - evernote
   - firefox
   - google-chrome
+  - google-cloud-sdk
   - google-drive-file-stream
   - iterm2
+  - java
   - keybase
   - marshallofsound-google-play-music-player
+  - mysqlworkbench
   - openemu-experimental
   - postgres
   - postman
