@@ -16,6 +16,10 @@ vnoremap <space> zf
 vnoremap < <gv
 vnoremap > >gv
 
+" Buffer navigation
+map <S-Left> :bp<CR>
+map <S-Right> :bn<CR>
+
 " Section: Vim options ->>1
 "--------------------------------------------------------------------------
 
@@ -125,6 +129,9 @@ let g:terraform_fold_sections=1
 let g:WebDevIconsNerdTreeGitPluginForceVAlign=1
 let g:WebDevIconsUnicodeDecorateFolderNodes=1
 let g:DevIconsEnableFoldersOpenClose=1
+
+" vim-gitgutter
+map <Leader>ga :GitGutterAll<CR>
 
 " Section: Color and syntax ->>1
 "--------------------------------------------------------------------------
