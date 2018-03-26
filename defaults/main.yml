@@ -15,6 +15,7 @@ basic_tools:
   - nnn
   - terraform
   - the_silver_searcher
+  - wget
 
 homebrew_cask_applications:
   - 1password
@@ -102,6 +103,7 @@ vim_plugins:
   - { name: youcompleteme, repo: "https://github.com/Valloric/YouCompleteMe.git" }
 
 ssh_keys: []
+ssh_config: ''
 
 gpg_flag: -----BEGIN PGP PUBLIC KEY BLOCK-----
 gpg_key: { id: jd@inkatze.com, public: '', private: '' }
