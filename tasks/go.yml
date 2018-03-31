@@ -1,0 +1,21 @@
+---
+
+- name: Installing golang packages
+  homebrew:
+    name: "{{ item  }}"
+  with_items: "{{ go_brew_packages }}"
+
+- name: Creating GOPATH
+  file:
+    state: directory
+    path: "{{ gopath }}"
+
+- name: Creating bin directory to avoid shell issues
+  file:
+    state: directory
+    path: "{{ gopath }}/bin"
+
+- name: Creating personal golang github src
+  file:
+    state: directory
+    path: "{{ gopath }}/src/github.com/inkatze"

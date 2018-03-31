@@ -30,6 +30,10 @@
   tags:
     - python
 
+- import_tasks: go.yml
+  tags:
+    - go
+
 - import_tasks: node.yml
   tags:
     - node

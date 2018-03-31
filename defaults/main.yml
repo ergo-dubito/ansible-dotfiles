@@ -95,6 +95,7 @@ vim_plugins:
   - { name: vim-fish, repo: "https://github.com/dag/vim-fish.git" }
   - { name: vim-fugitive, repo: "https://github.com/tpope/vim-fugitive.git" }
   - { name: vim-gitgutter, repo: "https://github.com/airblade/vim-gitgutter.git" }
+  - { name: vim-go, repo: "https://github.com/fatih/vim-go.git" }
   - { name: vim-indentLine, repo: "https://github.com/Yggdroot/indentLine.git" }
   - { name: vim-terraform, repo: "https://github.com/hashivim/vim-terraform.git" }
   - { name: sierra, repo: "https://github.com/AlessandroYorba/Sierra.git" }
@@ -107,3 +108,7 @@ ssh_config: ''
 
 gpg_flag: -----BEGIN PGP PUBLIC KEY BLOCK-----
 gpg_key: { id: jd@inkatze.com, public: '', private: '' }
+
+go_brew_packages:
+  - go
+gopath: ~/dev/go
