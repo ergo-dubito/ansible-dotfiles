@@ -4,6 +4,7 @@ set -xg GPG_TTY (tty)
 set -xg PYENV_ROOT $HOME/.pyenv
 set -xg GOPATH $HOME/dev/go
 set -xg PATH $PATH /usr/local/opt/python/libexec/bin
+set -xg PATH $PATH /usr/local/miniconda3/bin
 set -xg PATH $PATH /Applications/Postgres.app/Contents/Versions/latest/bin
 set -xg PATH $PATH $GOPATH/bin
 
