@@ -1,10 +1,15 @@
 ---
 
+homebrew_taps:
+  - caskroom/versions  # Fonts
+  - Yleisradio/terraforms  # chtf
+
 basic_tools:
   - ack
   - awscli
   - bash
   - bash-completion
+  - chtf
   - docker
   - fd
   - googler

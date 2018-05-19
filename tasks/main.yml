@@ -7,10 +7,11 @@
   tags:
     - homebrew
 
-- name: Adding versions hombrew tap
+- name: Adding additional taps
   homebrew_tap:
-    name: caskroom/versions
+    name: "{{ item }}"
     state: present
+  with_items: "{{ homebrew_taps }}"
 
 - name: Installing basic tools
   homebrew:

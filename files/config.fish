@@ -17,4 +17,9 @@ if status --is-login
 end
 
 set -xg GPG_TTY (tty)
+
+# TODO: Simplify this
 source /usr/local/miniconda3/etc/fish/conf.d/conda.fish
+if test -f /usr/local/share/chtf/chtf.fish
+    source /usr/local/share/chtf/chtf.fish
+end
