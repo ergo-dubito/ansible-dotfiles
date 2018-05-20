@@ -61,7 +61,7 @@ mas_applications:
   - { id: "1012291524", name: Moneywiz 2 }
   - { id: "1176895641", name: Spark }
   - { id: "1278508951", name: Trello }
-  - { id: "557168941", name: Tweetbot }
+  - { id: "1384080005", name: Tweetbot 3 for Twitter }
   - { id: "410628904", name: Wunderlist }
 
 python_brew_packages:
