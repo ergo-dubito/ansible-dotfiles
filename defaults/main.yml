@@ -31,6 +31,7 @@ homebrew_cask_applications:
   - dropbox
   - evernote
   - firefox
+  - google-chat
   - google-chrome
   - google-cloud-sdk
   - google-drive-file-stream
