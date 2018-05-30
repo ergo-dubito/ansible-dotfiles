@@ -6,7 +6,7 @@
 
 - name: Adding font's hombrew tap
   homebrew_tap:
-    name: caskroom/fonts
+    name: homebrew/cask-fonts
 
 - name: Installing font
   homebrew_cask:

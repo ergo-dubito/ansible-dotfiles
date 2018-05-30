@@ -1,7 +1,7 @@
 ---
 
 homebrew_taps:
-  - caskroom/versions  # Fonts
+  - homebrew/cask-versions  # To use beta and experimental stuff
   - Yleisradio/terraforms  # chtf
 
 basic_tools:
@@ -60,6 +60,7 @@ homebrew_cask_applications:
 mas_applications:
   - { id: "1263070803", name: Lungo }
   - { id: "1012291524", name: Moneywiz 2 }
+  - { id: "409201541", name: Pages }
   - { id: "1176895641", name: Spark }
   - { id: "1278508951", name: Trello }
   - { id: "1384080005", name: Tweetbot 3 for Twitter }
