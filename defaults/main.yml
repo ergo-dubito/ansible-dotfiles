@@ -60,6 +60,7 @@ homebrew_cask_applications:
 # Only ids are actually necessary but I added the name to remember what they mean
 mas_applications:
   - { id: "1263070803", name: Lungo }
+  - { id: "1289197285", name: MindNode 5 }
   - { id: "1012291524", name: Moneywiz 2 }
   - { id: "409201541", name: Pages }
   - { id: "1176895641", name: Spark }
