@@ -39,6 +39,7 @@ homebrew_cask_applications:
   - java
   - keybase
   - marshallofsound-google-play-music-player
+  - microsoft-office
   - miniconda
   - mysqlworkbench
   - openemu-experimental
