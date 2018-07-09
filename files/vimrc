@@ -1,3 +1,11 @@
+" Section: Vim Python Hack
+"--------------------------------------------------------------------------
+
+" Vim loads stuff wrong from Python as for Python 3.7; this fixes the problem
+if has('python3')
+  silent! python3 1
+endif
+
 " Section: Key mappings ->>1
 "--------------------------------------------------------------------------
 
