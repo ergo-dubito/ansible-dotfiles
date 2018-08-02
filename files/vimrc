@@ -106,7 +106,7 @@ execute pathogen#infect()
 execute pathogen#helptags()
 
 " NERD_tree.vim
-let NERDTreeIgnore=['\~$', '\.pyc$', '__pycache__', '\.egg-info$']
+let NERDTreeIgnore=['\~$', '\.pyc$', '__pycache__', '\.egg-info$', 'build', 'dist']
 map <C-n> :NERDTreeToggle<CR>
 
 " indentLine
