@@ -60,6 +60,7 @@ set shiftround " Inteligent indent. roud the spaces of the shift width
 set showbreak=↲ " Show me where you broke my lines
 set showmatch " Highlight matching parentesis, braces, etc.
 set sidescrolloff=3 " Side margins
+set conceallevel=0 " Don't like when stuff is hidden
 
 " Search
 set hlsearch " Highlight search
