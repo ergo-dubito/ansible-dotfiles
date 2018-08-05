@@ -3,6 +3,7 @@
 homebrew_taps:
   - homebrew/cask-versions  # To use beta and experimental stuff
   - Yleisradio/terraforms  # chtf
+  - homebrew/cask-drivers  # philips-hue-sync
 
 basic_tools:
   - ack
@@ -43,6 +44,7 @@ homebrew_cask_applications:
   - miniconda
   - mysqlworkbench
   - openemu-experimental
+  - philips-hue-sync
   - postgres
   - postman
   - skype
